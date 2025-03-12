@@ -5,13 +5,12 @@ import datetime
 import re
 import time
 import concurrent.futures
+import os
 
 # 🔑 API Key Hardcoded untuk Testing
-API_KEY = "AIzaSyDqHoSFGDNS2mpLAJWx4lbrXor6nJ75nNg"
-SEARCH_ENGINE_ID = "a43748b0305c4448d"
-
-# 🖼 Path Image Lokal
-LOGO_PATH = "/Users/project/mizuho_social_media_listening/mizuho_indonesia.png"
+API_KEY = os.getenv('GOOGLE_API_KEY')
+SEARCH_ENGINE_ID = os.getenv('GOOGLE_SEARCH_ENGINE_ID')
+LOGO_PATH = os.getenv('LOGO_PATH')
 
 # 🔎 Daftar kata kunci positif dan negatif
 POSITIVE_KEYWORDS = ["ekspansi", "laba meningkat", "penghargaan", "inovasi", "kerja sama", "investasi", "pertumbuhan", "sukses"]
